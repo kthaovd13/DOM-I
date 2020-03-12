@@ -37,6 +37,68 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+/// Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
+//logo.src = siteContent["nav"]["img-src"]
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navLinks = document.querySelectorAll("a")
+navLinks[0].textContent = 'Services'
+navLinks[1].textContent = 'Product'
+navLinks[2].textContent = 'Vision'
+navLinks[3].textContent = 'Features'
+navLinks[4].textContent = 'About'
+navLinks[5].textContent = 'Contact'
+
+let greatTitle = document.querySelector("h1")
+greatTitle.textContent = "DOM Is Awesome"
+
+let button = document.querySelector("button")
+button.textContent = "Get Started"
+
+let headImg = document.getElementById("cta-img")
+headImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let mainStuff = document.querySelectorAll(".main-content h4")
+mainStuff[0].textContent = siteContent["main-content"]["features-h4"]
+mainStuff[1].textContent = siteContent["main-content"]["about-h4"]
+mainStuff[2].textContent = siteContent["main-content"]["services-h4"]
+mainStuff[3].textContent = siteContent["main-content"]["product-h4"]
+mainStuff[4].textContent = siteContent["main-content"]["vision-h4"]
+
+
+let mainStuffText = document.querySelectorAll(".main-content p")
+mainStuffText[0].textContent = siteContent["main-content"]["features-content"]
+mainStuffText[1].textContent = siteContent["main-content"]["about-content"]
+mainStuffText[2].textContent = siteContent["main-content"]["services-content"]
+mainStuffText[3].textContent = siteContent["main-content"]["product-content"]
+mainStuffText[4].textContent = siteContent["main-content"]["vision-content"]
+
+let midImg = document.getElementById("middle-img")
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let infoMe = document.querySelector(".contact h4")
+infoMe.textContent = siteContent["contact"]["contact-h4"]
+
+let infoMe1 = document.querySelectorAll(".contact p")
+infoMe1[0].textContent = siteContent["contact"]["address"]
+infoMe1[1].textContent = siteContent["contact"]["phone"]
+infoMe1[2].textContent = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer")
+footer.textContent = "Copyright Great Idea! 2018"
+
+let extraLink = document.createElement('a')
+extraLink.textContent = "Start"
+let parentElement = document.querySelector('nav')
+parentElement.prepend(extraLink)
+
+let extraLink1 = document.createElement('a')
+extraLink1.textContent = "End"
+let parentElement1 = document.querySelector('nav')
+parentElement.appendChild(extraLink1)
+
+const secondaryHeaders = document.querySelectorAll('nav a')
+
+secondaryHeaders.forEach(element => {
+  element.style.color = 'green'})
