@@ -49,3 +49,13 @@ navLinks[2].textContent = 'Vision'
 navLinks[3].textContent = 'Features'
 navLinks[4].textContent = 'About'
 navLinks[5].textContent = 'Contact'
+
+let greatTitle = document.querySelector("h1")
+greatTitle.textContent = "DOM Is Awesome"
+
+let button = document.querySelector("button")
+button.textContent = "Get Started"
+
+let headImg = document.getElementById("cta-img")
+headImg.setAttribute('src', siteContent["cta"]["img-src"])
+
